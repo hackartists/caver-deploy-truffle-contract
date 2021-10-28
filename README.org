@@ -1,0 +1,28 @@
+#+title: Deploying truffle contract by Caver and KAS
+
+* Environment Description
+  + You can use KAS credential and your own address for deployment of Exchange contract.
+  + You need to define four environment variables as arguments.
+
+ | Name           | Description                       |
+ |----------------+-----------------------------------|
+ | CHAIN_ID       | Klaytn chain IDs (`8217`, `1001`) |
+ | KAS_ACCESS_KEY | KAS Access Key ID                 |
+ | KAS_SECRET_KEY | KAS Secret Key ID                 |
+ | ADDRESS        | Contract owner address            |
+ | PRIVATE_KEY    | Conract owner's private key       |
+
+* Set up an account
+  + You must charge KLAY into the owner before deploying it
+  + You can refer to [KAS tutorial](https://docs.klaytnapi.com/v/en/getting-started/get-ready#getting-started-getready-key) to create KAS credentials
+
+* Deploying contract
+  + Firstly, compile contracts.
+  + Next, run `deploy.js` with above arguments.
+
+#+begin_src sh
+  truffle compile
+  yarn add caver-js
+  KAS_ACCESS_KEY="" KAS_SECRET_KEY="" ADDRESS="" PRIVATE_KEY="" node deploy
+#+end_src
+ 
