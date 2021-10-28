@@ -1,0 +1,1 @@
+# caver-deploy-truffle-contract
